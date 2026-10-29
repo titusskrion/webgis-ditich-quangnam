@@ -377,7 +377,6 @@
             }
             return autolinker.link(value.replace(/'/g, '\'').toLocaleString());
         }
-<<<<<<< HEAD
         function popupHtml(feature) {
             var value = feature.properties['popup_html'];
             if (value === null || value === undefined) {
@@ -391,8 +390,6 @@
             html = html.replace(/IV\s*\/\s*Đề\s+xuất[\s\S]*$/i, '');
             return html.trim();
         }
-=======
->>>>>>> 31952031c8370ec678952b566438acb8348125c4
         function pop_DiTich_QuangNam_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -404,63 +401,7 @@
                 },
                 mouseover: highlightFeature,
             });
-<<<<<<< HEAD
             var popupContent = '<table><tr><td colspan="2">' + popupHtml(feature) + '</td></tr></table>';
-=======
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ten_di_tich'] !== null ? popupText(feature, 'ten_di_tich') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cap_xep_hang'] !== null ? popupText(feature, 'cap_xep_hang') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['loai_hinh_di_tich'] !== null ? popupText(feature, 'loai_hinh_di_tich') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['dia_diem_day_du'] !== null ? popupText(feature, 'dia_diem_day_du') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['so_nha_duong'] !== null ? popupText(feature, 'so_nha_duong') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['thon_khoi_lang'] !== null ? popupText(feature, 'thon_khoi_lang') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['xa_phuong_thi_tran'] !== null ? popupText(feature, 'xa_phuong_thi_tran') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['huyen_thi_tp_cu'] !== null ? popupText(feature, 'huyen_thi_tp_cu') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tinh_thanh'] !== null ? popupText(feature, 'tinh_thanh') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['hien_trang_tom_tat'] !== null ? popupText(feature, 'hien_trang_tom_tat') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['muc_do_nguy_co'] !== null ? popupText(feature, 'muc_do_nguy_co') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['so_quyet_dinh'] !== null ? popupText(feature, 'so_quyet_dinh') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['popup_title'] !== null ? popupText(feature, 'popup_title') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['popup_summary'] !== null ? popupText(feature, 'popup_summary') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['popup_html'] !== null ? popupText(feature, 'popup_html') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['search_text'] !== null ? popupText(feature, 'search_text') : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['noi_dung_day_du_trich_xuat'] !== null ? popupText(feature, 'noi_dung_day_du_trich_xuat') : '') + '</td>\
-                    </tr>\
-                </table>';
->>>>>>> 31952031c8370ec678952b566438acb8348125c4
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
 				addClassToPopupIfMedia(content, e.popup);
@@ -847,35 +788,9 @@
             filterToggle.setAttribute('aria-expanded', 'false');
             filterToggle.innerHTML = 'Filters';
             var menu = document.getElementById('menu');
-<<<<<<< HEAD
             filterToggle.onclick = function() {
                 var isOpen = menu.classList.toggle('filters-open');
                 filterToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-=======
-            filterToggle.onmouseenter = function() {
-                menu.classList.add('filters-open');
-                filterToggle.setAttribute('aria-expanded', 'true');
-            };
-            filterToggle.onmouseleave = function() {
-                menu.classList.remove('filters-open');
-                filterToggle.setAttribute('aria-expanded', 'false');
-            };
-            menu.onmouseenter = function() {
-                menu.classList.add('filters-open');
-                filterToggle.setAttribute('aria-expanded', 'true');
-            };
-            menu.onmouseleave = function() {
-                menu.classList.remove('filters-open');
-                filterToggle.setAttribute('aria-expanded', 'false');
-            };
-            filterToggle.onfocus = function() {
-                menu.classList.add('filters-open');
-                filterToggle.setAttribute('aria-expanded', 'true');
-            };
-            filterToggle.onblur = function() {
-                menu.classList.remove('filters-open');
-                filterToggle.setAttribute('aria-expanded', 'false');
->>>>>>> 31952031c8370ec678952b566438acb8348125c4
             };
             document.body.appendChild(filterToggle);
         resetLabels([layer_RG_QuangNam_KVNC_1]);
